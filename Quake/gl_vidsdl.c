@@ -2825,8 +2825,8 @@ static void VID_GetRenderSize (int *width, int *height)
 	*height = vid.height;
 	if (r_width.value > 0 && r_height.value > 0)
 	{
-		*width = (int)CLAMP (q_min (320, vid.width), r_width.value, vid.width);
-		*height = (int)CLAMP (q_min (200, vid.height), r_height.value, vid.height);
+		*width = (int)CLAMP (1, r_width.value, vid.width);
+		*height = (int)CLAMP (1, r_height.value, vid.height);
 	}
 }
 
