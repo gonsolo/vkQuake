@@ -534,10 +534,10 @@ static qboolean VID_ValidMode (int width, int height, float refreshrate, qboolea
 	if (fullscreen && vid_fullscreen.value == 1 && vid_desktopfullscreen.value)
 		return true;
 
-	if (width < 320)
+	if (width < 1)
 		return false;
 
-	if (height < 200)
+	if (height < 1)
 		return false;
 
 	if (fullscreen && VID_SDL_GetDisplayMode (width, height, refreshrate) == NULL)
